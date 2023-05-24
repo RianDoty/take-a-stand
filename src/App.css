@@ -17,3 +17,47 @@
   float: left;
   padding: 20px;
 }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.bibliography {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+.bibliography p {
+  text-indent: 50px;
+}
+
+.muted {
+  color: gray
+}
+
+.fadein {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.simlayout {
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  width: 980px;
+  margin-left: -130px;
+  gap: 10px;
+}
+
+.simlayout-text {
+  flex: 1;
+}
+
+.simlayout-povertysim {
+  flex: 1;
+}
