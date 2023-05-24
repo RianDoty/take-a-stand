@@ -1,7 +1,7 @@
 export default function TedTalk() {
-    return (
-        <>
-            <h1>Ted Talk</h1>
-        </>
-    )
+  return (
+    <>
+      <h1>TED Talk</h1>
+    </>
+  );
 }

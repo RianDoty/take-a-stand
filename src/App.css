@@ -24,7 +24,7 @@ main {
 }
 
 .bibliography {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   text-align: left;
 }
 
@@ -33,24 +33,26 @@ main {
 }
 
 .muted {
-  color: gray
+  color: gray;
 }
 
 .fadein {
-  animation: fadeIn 1s;
+  animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .simlayout {
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: row;
-  width: 980px;
-  margin-left: -130px;
   gap: 10px;
 }
 
