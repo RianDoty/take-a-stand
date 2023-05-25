@@ -64,11 +64,24 @@ main {
   flex: 1;
 }
 
-/* Cost and revenue breakdown */
+/* Poverty sim styles */
+.povertysim {
+}
+
 .breakdown {
   display: flex;
+  flex-direction: column-reverse;
+  background: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 30px;
+  margin: 0 10px;
 }
 
 .factor {
   width: 100%;
+  min-height: 40px;
+}
+
+* {
+  outline: auto;
 }
