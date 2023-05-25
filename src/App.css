@@ -63,3 +63,12 @@ main {
 .simlayout-povertysim {
   flex: 1;
 }
+
+/* Cost and revenue breakdown */
+.breakdown {
+  display: flex;
+}
+
+.factor {
+  width: 100%;
+}
