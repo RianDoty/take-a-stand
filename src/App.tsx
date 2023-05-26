@@ -11,7 +11,10 @@ function Navigation() {
       <li><Link to="/">Home</Link></li>
       <li><Link to="/about">About</Link></li>
       <li><Link to="/references">References</Link></li>
-      <li><Link to="/tedtalk">TED Talk</Link></li>
+      <li><Link to="/action">Action</Link></li>
+      <li><Link to="/information">Information</Link></li>
+      <li><Link to="/rights">Connection to Rights</Link></li>
+      <li><Link to="/webquest">Web Quest</Link></li>
     </ul>
   );
 }

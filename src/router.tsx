@@ -3,7 +3,11 @@ import { Switch, Route, Router } from "wouter";
 import Home from "./pages/home";
 import About from "./pages/about";
 import References from "./pages/references";
-import TedTalk from "./pages/tedtalk"
+import Action from "./pages/action"
+import Information from "./pages/information";
+import Rights from "./pages/rights";
+import WebQuest from "./pages/webquest";
+
 
 /**
  * The router is imported in app.jsx
@@ -18,6 +22,9 @@ export default () => (
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
     <Route path="/references" component={References} />
-    <Route path="/tedtalk" component={TedTalk} />
+    <Route path="/action" component={Action} />
+    <Route path="/information" component={Information} />
+    <Route path="/rights" component={Rights} />
+    <Route path="/webquest" component={WebQuest} />
   </Switch>
 );

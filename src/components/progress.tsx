@@ -2,6 +2,14 @@ import React, { Children, useContext } from "react";
 
 const ProgressContext = React.createContext(0)
 
+export function ChapterSelect() {
+  const progress = useContext(ProgressContext);
+
+  return (
+    <></>
+  )
+}
+
 export function Exclusive({children, progress}: {children: React.ReactNode, progress: number}) {
   const currentProgress = useContext(ProgressContext)
 
@@ -20,6 +28,13 @@ export function ProgressManager({
   children: React.ReactNode;
   exclusive?: boolean
 }) {
+  //Check if "show all" has been clicked, if so, just show everything
+  const aboveProgress = useContext(ProgressContext);
+  if (aboveProgress >= 999) {
+    progress = 999
+  }
+
+
   const childrenArray = Children.toArray(children) as React.ReactElement<
     any,
     string | React.JSXElementConstructor<any>

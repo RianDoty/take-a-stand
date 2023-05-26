@@ -1,54 +1,43 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { SimLayout, PovertySim1 } from "../components/povertysim";
+import { SimLayout, PovertySim1, PovertySim2, PovertySim3 } from "../components/povertysim";
 import { ProgressManager, ProgressGroup, Exclusive } from "../components/progress";
 
 //Home page
 export default function Home() {
-  
-  const [progress, setProgress] = useState(0);
 
-  function progressMain() {
-    setProgress((p:number) => p+1)
-  }
 
   return (
     <>
-      <h1 className="title">welcome to the home</h1>
-      
-      <h2>During COVID-19, {"<statistic>"}</h2>
-      <ProgressManager progress={progress} exclusive={true}>
-        <ProgressGroup>
-          <SimLayout sim={PovertySim1}>
-            <ProgressGroup>
-              <Exclusive progress={0}><button>Unlock Everything (for grading)</button></Exclusive>
-              <br/>
-              Let's say that you work at minimum wage. As of 2023 in America, that
-              means that you'd make at least $7.25 for each hour you'd be working.
-              <Exclusive progress={0}><div className="muted">
-                Psst! Move the "salary" slider to $7.25!{" "}
-              </div></Exclusive>
-            </ProgressGroup>
-            <ProgressGroup>
-              That seems like a pretty good monthly salary! <br />
-              Comparing it to the montly costs, that leaves a pretty good chunk of
-              pocket change.
-            </ProgressGroup>
-            <ProgressGroup>
-              Except... <br />
-              Those aren't numbers from 2023. <br />
-              <i>Those are the numbers from 2009.</i>
-              <button onClick={progressMain}>The real situation...</button>
-            </ProgressGroup>
-          </SimLayout>
-        </ProgressGroup>
+          <h1 className="title">welcome to the home</h1>
+          <h2>
+            During COVID-19, 18 million people reported not having
+            consistent access to food.
+          </h2>
+          <p className="inverted">
+            It's fairly safe to say that COVID-19 shut down the world as we
+            knew it. But when you shut down the world, you shut down supply
+            chains. And when you shut down supply chains, prices rise
+            like <i>crazy,</i> endangering the food and fuel security
+            of many who, had they been living just a few years earlier,
+            would be perfectly fine.
+          </p>
+          <p>
+            Fast forward to 2023, and the lasting effects on the <b>Cost of
+              Living,</b> or the total amount of money spent on basic needs,
+            are still suffered by many. Food prices are up 19.1%, electricity
+            prices are up 67%, and domestic gas prices are up <i>129%</i> from just
+            last year.
+          </p>
+          <p className="inverted">
+            People can always speculate on how these prices are going to
+            change or fluctuate in the future, but that can't change one simple
+            fact:<br /><br />
 
-        <ProgressGroup>
-          ...is much worse.<br/><br/>
-          Taking into account inflation rates from the past 14 years,
-          that $7.25
-        </ProgressGroup>
-      </ProgressManager>
+            People need financial security, <i>now,</i> and they aren't getting it.<br /><br />
+            <Link to='/information' style={{background: 'lightgray', padding: '5px', borderRadius: '7px'}}>How can we, Labor Unions for All, change that?</Link>
+          </p>
+        
     </>
   );
 }

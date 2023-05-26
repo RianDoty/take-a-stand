@@ -5,12 +5,14 @@ const MaxContext = React.createContext(1);
 export function StackedBars({
   children,
   max,
+  style
 }: {
   children: React.ReactNode;
   max: number;
+  style?: React.CSSProperties
 }) {
   return (
-    <div className="breakdown">
+    <div className="breakdown" style={style}>
       <MaxContext.Provider value={max}>{children}</MaxContext.Provider>
     </div>
   );
@@ -23,7 +25,7 @@ export function Bar({
 }: {
   src: string;
   amt: number;
-  color: string;
+  color: `#${string}`;
 }) {
   const max = useContext(MaxContext);
 
@@ -31,11 +33,11 @@ export function Bar({
     <div
       className="bar"
       style={{
-        height: `${(amt / max) * 100}%`,
+        height: `${Math.min((amt / max) * 100, 100)}%`,
         backgroundColor: color,
       }}
     >
-      {(amt / max) * 100}
+
       <img src={src} />
     </div>
   );

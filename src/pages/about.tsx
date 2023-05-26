@@ -17,7 +17,7 @@ export default function About() {
         doesn't seem to be happening anytime soon enough for many people,
         I was moved to make this information campaign!
       </p>
-      <p>
+      <p className="inverted">
         Being a member of <b>GENERATION Z,</b> our outlook isn't exactly
         the best. Global warming threatens to blow up the planet, a world war
         that just might go nuclear is constantly given the opportunity to erupt,
@@ -25,6 +25,11 @@ export default function About() {
         not even to live, but to <b>survive,</b> seems <i>impossible.</i>
       </p>
       <p>
+        People have attempted to address the issue of rising costs by raising
+        the minimum wage, but that ignores a central problem: legislation is
+        slow, and people need results <b>now.</b>
+      </p>
+      <p className="inverted">
         We need to be educated and knowledgable about just how useful,
         and in the most dire cases <i>necessary,</i> unions are to not
         just the health of our wallets, but ourselves.
